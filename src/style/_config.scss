@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+$dark-text: hsl(229, 25%, 31%);
+
+@mixin tablet {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1020px) {
+    @content;
+  }
+}
