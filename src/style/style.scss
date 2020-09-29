@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+
+body {
+  background-color: hsl(214, 47%, 23%);
+  background-image: linear-gradient(
+    0deg,
+    hsl(237, 49%, 15%) 0%,
+    hsl(214, 47%, 23%) 100%
+  );
+  background-attachment: fixed;
+  height: 100%;
+}
