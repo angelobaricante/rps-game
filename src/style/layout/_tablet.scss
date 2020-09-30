@@ -25,10 +25,17 @@
     height: calc(100vh - 155px);
   }
   .game {
+    margin-top: 100px;
     &__btn {
       width: 140px;
       height: 140px;
       padding: 1.7rem;
+    }
+    &__btn--scissor {
+      transform: translate(-70%, -50%);
+    }
+    &__btn--paper {
+      transform: translate(-30%, -50%);
     }
   }
   .triangle {
