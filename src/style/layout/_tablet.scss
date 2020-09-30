@@ -1,2 +1,23 @@
 @include tablet {
+  .header {
+    max-width: 600px;
+    margin: auto;
+    border-radius: 15px;
+    padding: 2rem 2rem 2rem 2.5rem;
+  }
+  .logo {
+    &__img {
+      width: 130px;
+    }
+  }
+  .score {
+    padding: 1rem 3.1rem;
+    &__text {
+      font-size: 1.4rem;
+    }
+
+    &__counter {
+      font-size: 4.5rem;
+    }
+  }
 }
