@@ -1,3 +1,72 @@
 .mainGame {
   height: calc(100vh - 115px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  position: relative;
+
+  &__btn {
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    display: flex;
+    padding: 1.1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__btn--rock {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: linear-gradient(#dc2e4e, #dd405d);
+    box-shadow: 0px 6px 0px -1px #991635;
+  }
+
+  &__btn--paper {
+    top: -50%;
+    left: 0%;
+    transform: translate(-50%, 50%);
+    background-image: linear-gradient(#4865f4, #5671f5);
+    box-shadow: 0px 6px 0px -1px #2642bf;
+  }
+
+  &__btn--scissor {
+    top: -50%;
+    left: 100%;
+    transform: translate(-50%, 50%);
+    background-image: linear-gradient(#ec9e0e, #eca922);
+    box-shadow: 0px 6px 0px -1px #cc6d1b;
+  }
+}
+
+.optionIcon {
+  box-shadow: inset 0px 5px 0px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 100px;
+
+  &__img {
+    transition: all 0.5s ease-in-out;
+    width: 35px;
+  }
+}
+
+.triangle {
+  &__img {
+    transition: all 0.5s ease-in-out;
+    width: 200px;
+  }
 }

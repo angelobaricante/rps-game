@@ -1,2 +1,19 @@
 @include desktop {
+  .game {
+    &__btn {
+      width: 180px;
+      height: 180px;
+      padding: 2.7rem;
+    }
+  }
+  .triangle {
+    &__img {
+      width: 370px;
+    }
+  }
+  .optionIcon {
+    &__img {
+      width: 65px;
+    }
+  }
 }

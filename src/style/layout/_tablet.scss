@@ -7,7 +7,8 @@
   }
   .logo {
     &__img {
-      width: 130px;
+      width: 100%;
+      max-width: 130px;
     }
   }
   .score {
@@ -18,6 +19,26 @@
 
     &__counter {
       font-size: 4.5rem;
+    }
+  }
+  .mainGame {
+    height: calc(100vh - 155px);
+  }
+  .game {
+    &__btn {
+      width: 140px;
+      height: 140px;
+      padding: 1.7rem;
+    }
+  }
+  .triangle {
+    &__img {
+      width: 270px;
+    }
+  }
+  .optionIcon {
+    &__img {
+      width: 45px;
     }
   }
 }
