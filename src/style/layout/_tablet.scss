@@ -25,7 +25,6 @@
     height: calc(100vh - 155px);
   }
   .game {
-    margin-top: 100px;
     &__btn {
       width: 140px;
       height: 140px;
@@ -40,7 +39,7 @@
   }
   .triangle {
     &__img {
-      width: 370px;
+      width: 300px;
     }
   }
   .optionIcon {

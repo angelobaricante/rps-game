@@ -8,15 +8,21 @@
 
 .game {
   position: relative;
+  margin-top: 100px;
+  transition: all 0.5s ease;
+  &--hide {
+    transform: scale(0);
+    display: none;
+  }
 
   &__btn {
     position: absolute;
     transition: all 0.5s ease-in-out;
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     border-radius: 100px;
     display: flex;
-    padding: 1.1rem;
+    padding: 1.5rem;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -26,24 +32,21 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-image: linear-gradient(#dc2e4e, #dd405d);
-    box-shadow: 0px 6px 0px -1px #991635;
+    @extend %rock;
   }
 
   &__btn--paper {
     top: 0%;
     left: 0%;
     transform: translate(-10%, -50%);
-    background-image: linear-gradient(#4865f4, #5671f5);
-    box-shadow: 0px 6px 0px -1px #2642bf;
+    @extend %paper;
   }
 
   &__btn--scissor {
     top: 0%;
     left: 100%;
     transform: translate(-90%, -50%);
-    background-image: linear-gradient(#ec9e0e, #eca922);
-    box-shadow: 0px 6px 0px -1px #cc6d1b;
+    @extend %scissor;
   }
 }
 

@@ -1,15 +1,14 @@
 @include desktop {
   .game {
-    margin-top: 100px;
     &__btn {
-      width: 180px;
-      height: 180px;
+      width: 200px;
+      height: 200px;
       padding: 2.7rem;
     }
   }
   .triangle {
     &__img {
-      width: 430px;
+      width: 360px;
     }
   }
   .optionIcon {

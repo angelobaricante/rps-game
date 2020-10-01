@@ -1,0 +1,39 @@
+.result {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 600px;
+  justify-content: space-between;
+  align-items: center;
+
+  &__option {
+    transition: all 0.5s ease-in-out;
+    width: 130px;
+    height: 130px;
+    border-radius: 100px;
+    display: flex;
+    padding: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__option--rock {
+    @extend %rock;
+  }
+
+  &__option--paper {
+    @extend %paper;
+  }
+
+  &__option--scissor {
+    @extend %scissor;
+  }
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
