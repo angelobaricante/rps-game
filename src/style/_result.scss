@@ -8,6 +8,7 @@
   transform: scale(0);
   display: none;
   transition: all 0.5s ease;
+  margin-bottom: 5rem;
 
   &--show {
     transform: scale(1);
@@ -52,8 +53,8 @@
   height: 130px;
   z-index: 1;
   border-radius: 500px;
-  box-shadow: 0px 0px 0px 16px #2b3956, 0px 0px 0px 32px #263554,
-    0px 0px 0px 48px #21304f;
+  box-shadow: 0px 0px 0px 26px #2b3956, 0px 0px 0px 52px #263554,
+    0px 0px 0px 78px #21304f;
 
   &--show {
     transform: translate(-50%, -50%) scale(1);
@@ -100,18 +101,5 @@
     font-size: 5rem;
     font-weight: 700;
     white-space: nowrap;
-  }
-
-  &__btn {
-    margin-top: 2rem;
-    border: none;
-    border-radius: 7px;
-    letter-spacing: 2px;
-    background: #fff;
-    outline: none;
-    color: $dark-text;
-    font-family: inherit;
-    font-size: 1.5rem;
-    padding: 1rem 4.9rem;
   }
 }

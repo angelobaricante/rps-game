@@ -47,4 +47,37 @@
       width: 45px;
     }
   }
+  .btn {
+    &--rule {
+      left: 85%;
+    }
+  }
+
+  .ruleModal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    padding: 3rem;
+    border-radius: 10px;
+    &__heading {
+      padding-bottom: 0;
+      flex-basis: 90%;
+    }
+
+    &__img {
+      margin-top: 3rem;
+      flex-basis: 100%;
+      order: 2;
+    }
+
+    &__close {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+  }
 }

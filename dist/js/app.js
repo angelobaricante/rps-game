@@ -4,10 +4,13 @@ const gameBtns = document.querySelectorAll('.game__btn');
 const resultUserChoice = document.getElementById('userChoice');
 const resultCompChoice = document.getElementById('computerChoice');
 const resultText = document.querySelector('.action__text');
-const playAgainBtn = document.querySelector('.action__btn');
+const playAgainBtn = document.querySelector('#playAgain');
 const scoreEl = document.querySelector('.score__counter');
 const userWinEffect = document.querySelector('#userWinEffect');
 const compWinEffect = document.querySelector('#compWinEffect');
+const closeModal = document.querySelector('.ruleModal__close');
+const openModal = document.querySelector('#openModal');
+const modal = document.querySelector('.ruleModal');
 
 const winSet = ['paper', 'scissor', 'rock'];
 let scores = 0;
@@ -109,7 +112,14 @@ const resetGame = () => {
   }, 20);
 };
 
+const toggleModal = () => {
+  document.querySelector('.container').classList.toggle('container--blur');
+  modal.classList.toggle('ruleModal--show');
+};
+
 gameBtns.forEach((gameBtn) =>
   gameBtn.addEventListener('click', gameBtnHandler.bind(gameBtn))
 );
 playAgainBtn.addEventListener('click', playAgainHandler);
+closeModal.addEventListener('click', toggleModal);
+openModal.addEventListener('click', toggleModal);

@@ -78,7 +78,7 @@
           </div>
           <div class="action">
             <span class="action__text">YOU LOSE</span>
-            <button class="action__btn">PLAY AGAIN</button>
+            <button id="playAgain" class="btn">PLAY AGAIN</button>
           </div>
           <div class="result__option result__option--comp">
             <div id="compWinEffect" class="winEffect"></div>
@@ -94,7 +94,19 @@
             <p class="result__player">COMPUTER PICKED</p>
           </div>
         </div>
+        <div class="ruleBtn">
+          <button id="openModal" class="btn btn--rule">RULES</button>
+        </div>
       </main>
+    </div>
+    <div class="ruleModal">
+      <span class="ruleModal__heading">RULES</span>
+      <img
+        src="images/image-rules.svg"
+        alt="Game Rules"
+        class="ruleModal__img"
+      />
+      <div class="ruleModal__close">&#x2716;</div>
     </div>
   </body>
 </html>

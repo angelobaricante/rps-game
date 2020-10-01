@@ -6,9 +6,26 @@
   align-items: center;
 }
 
+.btn {
+  margin-top: 2rem;
+  border: none;
+  border-radius: 7px;
+  letter-spacing: 2px;
+  background: #fff;
+  outline: none;
+  color: $dark-text;
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding: 1rem 4.9rem;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(212, 68, 68);
+  }
+}
+
 .game {
   position: relative;
-  margin-top: 100px;
   transition: all 0.5s ease;
   &--hide {
     transform: scale(0);
@@ -22,6 +39,7 @@
     border-radius: 100px;
     display: flex;
     padding: 1.5rem;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     flex-direction: column;
