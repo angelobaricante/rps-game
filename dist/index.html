@@ -25,7 +25,7 @@
         </div>
       </header>
       <main class="mainGame">
-        <div class="game game--hide">
+        <div class="game">
           <div class="triangle">
             <img
               class="triangle__img"
@@ -33,7 +33,7 @@
               alt="Triangle"
             />
           </div>
-          <div data-option="1" class="game__btn game__btn--paper">
+          <div data-option="0" class="game__btn game__btn--paper">
             <div class="optionIcon">
               <img
                 src="images/icon-paper.svg"
@@ -42,16 +42,16 @@
               />
             </div>
           </div>
-          <div data-option="2" class="game__btn game__btn--scissor">
+          <div data-option="1" class="game__btn game__btn--scissor">
             <div class="optionIcon">
               <img
-                src="images/icon-scissors.svg"
+                src="images/icon-scissor.svg"
                 class="optionIcon__img"
                 alt="Rock"
               />
             </div>
           </div>
-          <div data-option="3" class="game__btn game__btn--rock">
+          <div data-option="2" class="game__btn game__btn--rock">
             <div class="optionIcon">
               <img
                 src="images/icon-rock.svg"
@@ -64,7 +64,7 @@
 
         <div class="result">
           <div class="result__option result__option--user">
-            <div class="selectedOption selectedOption--rock">
+            <div id="userChoice" class="selectedOption">
               <div class="optionIcon">
                 <img
                   src="images/icon-rock.svg"
@@ -79,7 +79,7 @@
             <button class="action__btn">PLAY AGAIN</button>
           </div>
           <div class="result__option result__option--comp">
-            <div class="selectedOption selectedOption--paper">
+            <div id="computerChoice" class="selectedOption">
               <div class="optionIcon">
                 <img
                   src="images/icon-paper.svg"
