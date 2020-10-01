@@ -36,10 +36,22 @@ const checkResult = () => {
 
 const userWins = () => {
   resultText.innerHTML = 'YOU WIN';
+  setTimeout(() => {
+    resultUserChoice
+      .closest('.result__option')
+      .querySelector('.winEffect')
+      .classList.add('winEffect--show');
+  }, 1000);
 };
 
 const computerWins = () => {
   resultText.innerHTML = 'YOU LOSE';
+  setTimeout(() => {
+    resultCompChoice
+      .closest('.result__option')
+      .querySelector('.winEffect')
+      .classList.add('winEffect--show');
+  }, 1000);
 };
 
 const resultDraw = () => {
@@ -80,6 +92,14 @@ const playAgainHandler = () => {
 const resetGame = () => {
   resultUserChoice.classList.remove('selectedOption--' + userOption);
   resultCompChoice.classList.remove('selectedOption--' + computerOption);
+  resultUserChoice
+    .closest('.result__option')
+    .querySelector('.winEffect')
+    .classList.remove('winEffect--show');
+  resultCompChoice
+    .closest('.result__option')
+    .querySelector('.winEffect')
+    .classList.remove('winEffect--show');
   gameContainer.style.display = 'block';
   setTimeout(() => {
     gameContainer.classList.remove('game--hide');
