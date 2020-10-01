@@ -6,22 +6,12 @@ const resultCompChoice = document.getElementById('computerChoice');
 const resultText = document.querySelector('.action__text');
 const playAgainBtn = document.querySelector('.action__btn');
 
-const resultSet = [
-  'selectedOption--paper',
-  'selectedOption--scissor',
-  'selectedOption--rock',
-];
 const winSet = ['paper', 'scissor', 'rock'];
-let userOption,
-  computerOption = '';
+let userOption, computerOption;
 
 const gameBtnHandler = function () {
   userOption = winSet[parseInt(this.dataset.option)];
-  gameContainer.classList.add('game--hide');
-  setTimeout(() => {
-    gameContainer.style.display = 'none';
-    computerTurn();
-  }, 500);
+  computerTurn();
 };
 
 const computerTurn = () => {
@@ -41,29 +31,31 @@ const checkResult = () => {
   } else {
     computerWins();
   }
+  displayResult();
 };
 
 const userWins = () => {
   resultText.innerHTML = 'YOU WIN';
-  displayResult();
 };
 
 const computerWins = () => {
   resultText.innerHTML = 'YOU LOSE';
-  displayResult();
 };
 
 const resultDraw = () => {
   resultText.innerHTML = 'DRAW';
-  displayResult();
 };
 
 const displayResult = () => {
-  setResultStyles();
-  resultContainer.style.display = 'flex';
+  gameContainer.classList.add('game--hide');
   setTimeout(() => {
-    resultContainer.classList.add('result--show');
-  }, 20);
+    gameContainer.style.display = 'none';
+    setResultStyles();
+    resultContainer.style.display = 'flex';
+    setTimeout(() => {
+      resultContainer.classList.add('result--show');
+    }, 20);
+  }, 500);
 };
 
 const setResultStyles = () => {
