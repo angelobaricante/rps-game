@@ -6,6 +6,8 @@ const resultCompChoice = document.getElementById('computerChoice');
 const resultText = document.querySelector('.action__text');
 const playAgainBtn = document.querySelector('.action__btn');
 const scoreEl = document.querySelector('.score__counter');
+const userWinEffect = document.querySelector('#userWinEffect');
+const compWinEffect = document.querySelector('#compWinEffect');
 
 const winSet = ['paper', 'scissor', 'rock'];
 let scores = 0;
@@ -39,10 +41,7 @@ const checkResult = () => {
 const userWins = () => {
   resultText.innerHTML = 'YOU WIN';
   setTimeout(() => {
-    resultUserChoice
-      .closest('.result__option')
-      .querySelector('.winEffect')
-      .classList.add('winEffect--show');
+    userWinEffect.classList.add('winEffect--show');
   }, 1000);
   increaseScore(true);
 };
@@ -50,10 +49,7 @@ const userWins = () => {
 const computerWins = () => {
   resultText.innerHTML = 'YOU LOSE';
   setTimeout(() => {
-    resultCompChoice
-      .closest('.result__option')
-      .querySelector('.winEffect')
-      .classList.add('winEffect--show');
+    compWinEffect.classList.add('winEffect--show');
   }, 1000);
   increaseScore(false);
 };
@@ -105,14 +101,8 @@ const playAgainHandler = () => {
 const resetGame = () => {
   resultUserChoice.classList.remove('selectedOption--' + userOption);
   resultCompChoice.classList.remove('selectedOption--' + computerOption);
-  resultUserChoice
-    .closest('.result__option')
-    .querySelector('.winEffect')
-    .classList.remove('winEffect--show');
-  resultCompChoice
-    .closest('.result__option')
-    .querySelector('.winEffect')
-    .classList.remove('winEffect--show');
+  userWinEffect.classList.remove('winEffect--show');
+  compWinEffect.classList.remove('winEffect--show');
   gameContainer.style.display = 'block';
   setTimeout(() => {
     gameContainer.classList.remove('game--hide');
