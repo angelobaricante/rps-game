@@ -16,4 +16,33 @@
       width: 65px;
     }
   }
+  .result {
+    max-width: 800px;
+    &__option {
+      flex-direction: column-reverse;
+      flex: 1;
+    }
+    &__player {
+      color: #fff;
+      margin-bottom: 35px;
+      font-size: 1.5rem;
+    }
+  }
+  .selectedOption {
+    width: 200px;
+    height: 200px;
+    padding: 2.8rem;
+  }
+  .winEffect {
+    width: 200px;
+    top: calc(50% + 45px);
+    height: 200px;
+    box-shadow: 0px 0px 0px 32px #2b3956, 0px 0px 0px 64px #263554,
+      0px 0px 0px 96px #21304f;
+  }
+  .action {
+    order: 0;
+    flex: 1;
+    margin-top: 0;
+  }
 }
