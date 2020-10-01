@@ -5,8 +5,10 @@ const resultUserChoice = document.getElementById('userChoice');
 const resultCompChoice = document.getElementById('computerChoice');
 const resultText = document.querySelector('.action__text');
 const playAgainBtn = document.querySelector('.action__btn');
+const scoreEl = document.querySelector('.score__counter');
 
 const winSet = ['paper', 'scissor', 'rock'];
+let scores = 0;
 let userOption, computerOption;
 
 const gameBtnHandler = function () {
@@ -42,6 +44,7 @@ const userWins = () => {
       .querySelector('.winEffect')
       .classList.add('winEffect--show');
   }, 1000);
+  increaseScore(true);
 };
 
 const computerWins = () => {
@@ -52,10 +55,20 @@ const computerWins = () => {
       .querySelector('.winEffect')
       .classList.add('winEffect--show');
   }, 1000);
+  increaseScore(false);
 };
 
 const resultDraw = () => {
   resultText.innerHTML = 'DRAW';
+};
+
+const increaseScore = (isIcrement) => {
+  if (isIcrement) {
+    scores++;
+  } else if (scores > 0) {
+    scores--;
+  }
+  scoreEl.innerHTML = scores;
 };
 
 const displayResult = () => {
