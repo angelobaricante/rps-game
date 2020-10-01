@@ -2,20 +2,16 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  flex-wrap: wrap;
   max-width: 600px;
   justify-content: space-between;
   align-items: center;
 
   &__option {
-    transition: all 0.5s ease-in-out;
-    width: 130px;
-    height: 130px;
-    border-radius: 100px;
     display: flex;
-    padding: 1.5rem;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    flex: 1 0 50%;
   }
 
   &__option--rock {
@@ -31,9 +27,56 @@
   }
 }
 
+.selectedOption {
+  transition: all 0.5s ease-in-out;
+  width: 130px;
+  height: 130px;
+  border-radius: 100px;
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &--rock {
+    @extend %rock;
+  }
+
+  &--paper {
+    @extend %paper;
+  }
+
+  &--scissor {
+    @extend %scissor;
+  }
+}
+
 .action {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  order: 1;
+  margin-top: 8rem;
+  flex: 0 1 100%;
+
+  &__text {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  &__btn {
+    margin-top: 2rem;
+    border: none;
+    border-radius: 7px;
+    letter-spacing: 2px;
+    background: #fff;
+    outline: none;
+    color: $dark-text;
+    font-family: inherit;
+    font-size: 1.5rem;
+    padding: 1rem 4.9rem;
+  }
 }
